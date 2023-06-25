@@ -97,16 +97,16 @@ onMounted(() => {
         console.log('cfg.leftIcon', cfg.leftIcon);
         if (cfg.leftIcon) {
           const { style, img } = cfg.leftIcon as LeftIcon;
-          group.addShape('rect', {
-            attrs: {
-              x: 1 - w / 2,
-              y: 1 - h / 2,
-              width: 38,
-              height: styles.height - 2,
-              fill: '#8c8c8c',
-              ...style,
-            },
-          });
+          // group.addShape('rect', {
+          //   attrs: {
+          //     x: 1 - w / 2,
+          //     y: 1 - h / 2,
+          //     width: 38,
+          //     height: styles.height - 2,
+          //     fill: '#8c8c8c',
+          //     ...style,
+          //   },
+          // });
 
           group.addShape('image', {
             attrs: {
