@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import { ref, reactive } from 'vue'
+import { ref, reactive, onMounted } from 'vue'
+import useCount from '../hooks/useCount'
 const todoList = reactive<{value: string, isDone: boolean}[]>([])
 const todoVal = ref('')
+const { count } = useCount();
 const handleAdd = () => {
   todoList.push({
     value: todoVal.value,
@@ -16,6 +18,14 @@ const handleDelete = (index) => {
 const handleDone = (index) => {
   todoList[index].isDone = true
 }
+
+onMounted(() => {
+  console.log('mounted11')
+  console.log(count)
+})
+onMounted(() => {
+  console.log('mounted22')
+})
 </script>
 
 <template>
